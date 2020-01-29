@@ -1,6 +1,13 @@
+@media only screen and (max-width: 900px) {
+  .tablet-none {
+    display: none;
+  }
+}
 .container {
-  width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 html {
   height: 100%;
@@ -28,6 +35,11 @@ html * {
   width: 100%;
   text-align: left;
 }
+@media only screen and (max-width: 900px) {
+  .intro__text {
+    text-align: center;
+  }
+}
 .intro__text h2 {
   margin-bottom: 15px;
   font-style: normal;
@@ -35,12 +47,23 @@ html * {
   font-size: 42px;
   line-height: 1.5;
 }
+@media only screen and (max-width: 570px) {
+  .intro__text h2 {
+    font-size: 20px;
+  }
+}
 .intro__text h1 {
   margin-bottom: 35px;
   font-style: normal;
   font-weight: normal;
   font-size: 68px;
-  line-height: 80px;
+  line-height: 1.5;
+}
+@media only screen and (max-width: 570px) {
+  .intro__text h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
 }
 .intro__text p {
   font-style: normal;
@@ -58,6 +81,14 @@ html * {
   height: 60vh;
   background-color: #FF6868;
 }
+@media only screen and (max-width: 900px) {
+  .intro__block {
+    height: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
 .intro img {
   position: absolute;
   bottom: 23px;
@@ -72,9 +103,21 @@ html * {
   height: 600px;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 900px) {
+  .specialization {
+    padding: 50px 0;
+    height: unset;
+  }
+}
 .specialization .container {
   position: relative;
   height: 100%;
+}
+@media only screen and (max-width: 900px) {
+  .specialization .container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .specialization__header {
   font-style: normal;
@@ -124,6 +167,13 @@ html * {
   right: 0;
   bottom: 0;
 }
+@media only screen and (max-width: 900px) {
+  .specialization img {
+    position: relative;
+    align-self: center;
+    max-width: 100%;
+  }
+}
 .red-header {
   position: relative;
   background-color: #FF6868;
@@ -138,7 +188,12 @@ html * {
   top: 0;
   bottom: 0;
   background-color: #FF6868;
-  width: calc((100vw - 1200px) / 2);
+  width: calc((100vw - 1100px + 15px) / 2);
+}
+@media only screen and (max-width: 900px) {
+  .red-header::before {
+    width: 15px;
+  }
 }
 .red-header h1 {
   font-style: normal;
@@ -195,6 +250,11 @@ html * {
   min-width: 34px;
   text-align: right;
 }
+@media only screen and (max-width: 900px) {
+  .default-list__number.double {
+    min-width: unset;
+  }
+}
 .dot-list li {
   position: relative;
   display: flex;
@@ -226,6 +286,7 @@ html * {
 }
 .escort img {
   position: absolute;
+  z-index: -1;
 }
 .escort #escort-1 {
   bottom: -100px;
@@ -240,6 +301,11 @@ html * {
 }
 .management img {
   position: absolute;
+}
+@media screen and (max-width: 1050px) {
+  .management img {
+    display: none;
+  }
 }
 .management #managment-1 {
   top: 0;
@@ -262,6 +328,12 @@ html * {
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 40px;
 }
+@media screen and (max-width: 700px) {
+  .marketing__grid {
+    grid-template-columns: 1fr;
+    grid-row-gap: 15px;
+  }
+}
 .marketing img {
   position: absolute;
   right: 0;
@@ -274,8 +346,18 @@ html * {
   top: 0;
   right: 0;
 }
+@media only screen and (max-width: 900px) {
+  .consulting img {
+    display: none;
+  }
+}
 .conflictology .container {
   position: relative;
+}
+@media only screen and (max-width: 900px) {
+  .conflictology .container {
+    overflow: hidden;
+  }
 }
 .conflictology__header {
   font-style: normal;

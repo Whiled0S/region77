@@ -2,11 +2,22 @@
 @white: #FFFFFF;
 @black: #000000;
 
-@container_width: 1200px;
+@container_width: 1100px;
+
+@tablet: ~"only screen and (max-width: 900px)";
+@mobile: ~"only screen and (max-width: 570px)";
+
+.tablet-none {
+  @media @tablet {
+    display: none;
+  }
+}
 
 .container {
-  width: @container_width;
+  max-width: @container_width;
   margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 html {
@@ -40,12 +51,20 @@ html * {
     width: 100%;
     text-align: left;
 
+    @media @tablet {
+      text-align: center;
+    }
+
     h2 {
       margin-bottom: 15px;
       font-style: normal;
       font-weight: normal;
       font-size: 42px;
       line-height: 1.5;
+
+      @media @mobile {
+        font-size: 20px;
+      }
     }
 
     h1 {
@@ -53,7 +72,12 @@ html * {
       font-style: normal;
       font-weight: normal;
       font-size: 68px;
-      line-height: 80px;
+      line-height: 1.5;
+
+      @media @mobile {
+        font-size: 35px;
+        margin-bottom: 20px;
+      }
     }
 
     p {
@@ -74,6 +98,13 @@ html * {
     width: 225px;
     height: 60vh;
     background-color: @red;
+
+    @media @tablet {
+      height: 20px;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
   }
 
   img {
@@ -92,9 +123,19 @@ html * {
   height: 600px;
   box-sizing: border-box;
 
+  @media @tablet {
+    padding: 50px 0;
+    height: unset;
+  }
+
   .container {
     position: relative;
     height: 100%;
+
+    @media @tablet {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__header {
@@ -151,6 +192,12 @@ html * {
     position: absolute;
     right: 0;
     bottom: 0;
+
+    @media @tablet {
+      position: relative;
+      align-self: center;
+      max-width: 100%;
+    }
   }
 }
 
@@ -168,7 +215,11 @@ html * {
     top: 0;
     bottom: 0;
     background-color: @red;
-    width: calc((100vw - @container_width) / 2);
+    width: calc((100vw - @container_width + 15px) / 2);
+
+    @media @tablet {
+      width: 15px;
+    }
   }
 
   h1 {
@@ -232,6 +283,10 @@ html * {
     &.double {
       min-width: 34px;
       text-align: right;
+
+      @media @tablet {
+        min-width: unset;
+      }
     }
   }
 }
@@ -275,6 +330,7 @@ html * {
 
   img {
     position: absolute;
+    z-index: -1;
   }
 
   #escort-1 {
@@ -296,6 +352,10 @@ html * {
 
   img {
     position: absolute;
+
+    @media screen and (max-width: 1050px) {
+      display: none;
+    }
   }
 
   #managment-1 {
@@ -324,6 +384,11 @@ html * {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 40px;
+
+    @media screen and (max-width: 700px){
+      grid-template-columns: 1fr;
+      grid-row-gap: 15px;
+    }
   }
 
   img {
@@ -342,6 +407,10 @@ html * {
     position: absolute;
     top: 0;
     right: 0;
+
+    @media @tablet {
+      display: none;
+    }
   }
 }
 
@@ -349,6 +418,10 @@ html * {
 
   .container {
     position: relative;
+
+    @media @tablet {
+      overflow: hidden;
+    }
   }
 
   &__header {
