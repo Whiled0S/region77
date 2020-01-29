@@ -57,7 +57,6 @@ html * {
   font-style: normal;
   font-weight: normal;
   font-size: 110px;
-  line-height: 1.5;
 }
 @media only screen and (max-width: 570px) {
   .intro__text h1 {
