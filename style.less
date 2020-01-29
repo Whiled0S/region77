@@ -215,7 +215,7 @@ html * {
     top: 0;
     bottom: 0;
     background-color: @red;
-    width: calc((100vw - @container_width + 15px) / 2);
+    width: calc((100vw - @container_width + 15px) / 2 + 350px);
 
     @media @tablet {
       width: 15px;
@@ -345,6 +345,7 @@ html * {
 }
 
 .management {
+  overflow: hidden;
 
   .container {
     position: relative;

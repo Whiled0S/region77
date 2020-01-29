@@ -188,7 +188,7 @@ html * {
   top: 0;
   bottom: 0;
   background-color: #FF6868;
-  width: calc((100vw - 1100px + 15px) / 2);
+  width: calc((100vw - 1100px + 15px) / 2 + 350px);
 }
 @media only screen and (max-width: 900px) {
   .red-header::before {
@@ -295,6 +295,9 @@ html * {
 .escort #escort-2 {
   right: 0;
   top: 100px;
+}
+.management {
+  overflow: hidden;
 }
 .management .container {
   position: relative;
