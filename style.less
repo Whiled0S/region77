@@ -1,0 +1,440 @@
+@red: #FF6868;
+@white: #FFFFFF;
+@black: #000000;
+
+@container_width: 1200px;
+
+.container {
+  width: @container_width;
+  margin: 0 auto;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+html * {
+  font-family: Roboto, sans-serif;
+}
+
+.intro {
+  height: calc(100vh - 20px);
+  position: relative;
+
+  .container {
+    height: 100%;
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    width: 100%;
+    text-align: left;
+
+    h2 {
+      margin-bottom: 15px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 42px;
+      line-height: 1.5;
+    }
+
+    h1 {
+      margin-bottom: 35px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 68px;
+      line-height: 80px;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    img {
+      position: absolute;
+    }
+  }
+
+  &__block {
+    position: absolute;
+    right: 0;
+    width: 225px;
+    height: 60vh;
+    background-color: @red;
+  }
+
+  img {
+    position: absolute;
+    bottom: 23px;
+    cursor: pointer;
+  }
+}
+
+.specialization {
+  display: flex;
+  margin-bottom: 80px;
+  padding: 90px 0;
+  color: @white;
+  background-color: @red;
+  height: 600px;
+  box-sizing: border-box;
+
+  .container {
+    position: relative;
+    height: 100%;
+  }
+
+  &__header {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    margin-bottom: 60px;
+  }
+
+  &__subheader {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 35px;
+  }
+
+  &__list-item {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__list-item-number {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @white;
+    color: @red;
+    border-radius: 50%;
+  }
+
+  &__list-item-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.red-header {
+  position: relative;
+  background-color: @red;
+  padding: 34px 46px 34px 0;
+  display: inline-block;
+  margin-bottom: 43px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: @red;
+    width: calc((100vw - @container_width) / 2);
+  }
+
+  h1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: @white;
+  }
+}
+
+.default-list {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
+
+  li {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  ul {
+    margin-top: 17px;
+
+    li {
+      position: relative;
+      display: flex;
+      align-items: baseline;
+      padding-left: 28px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 1.5;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        background-color: @black;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &__number {
+    margin-right: 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+
+    &.double {
+      min-width: 34px;
+      text-align: right;
+    }
+  }
+}
+
+.dot-list {
+  li {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    padding-left: 28px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 8px;
+      height: 8px;
+      background-color: @black;
+      border-radius: 50%;
+    }
+  }
+}
+
+.default-section {
+  padding-bottom: 80px;
+}
+
+.escort {
+  .container {
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  #escort-1 {
+    bottom: -100px;
+    left: -140px;
+  }
+
+  #escort-2 {
+    right: 0;
+    top: 100px;
+  }
+}
+
+.management {
+
+  .container {
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  #managment-1 {
+    top: 0;
+    right: 140px;
+  }
+
+  #managment-2 {
+    top: 120px;
+    right: 70px;
+  }
+
+  #managment-3 {
+    top: 270px;
+    right: -30px;
+  }
+}
+
+.marketing {
+  .container {
+    position: relative;
+  }
+
+  &__grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 40px;
+  }
+
+  img {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.consulting {
+
+  .container {
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.conflictology {
+
+  .container {
+    position: relative;
+  }
+
+  &__header {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 30px;
+  }
+
+  .default-list:first-of-type {
+    margin-bottom: 43px;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  #conflictology-1 {
+    bottom: 180px;
+    left: 370px;
+  }
+
+  #conflictology-2 {
+    bottom: -80px;
+    left: -110px;
+  }
+
+  .default-list {
+    position: relative;
+  }
+}
+
+.projects {
+
+  .container {
+    position: relative;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  #projects-1 {
+    top: 80px;
+    right: 160px;
+  }
+
+  #projects-2 {
+    top: 250px;
+    right: 0;
+  }
+
+  #projects-3 {
+    right: 240px;
+    bottom: 90px;
+  }
+
+  #projects-4 {
+    top: 220px;
+    right: 400px;
+  }
+}
+
+.contacts {
+  margin-bottom: 120px;
+
+  &__section {
+
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+
+    span {
+      font-weight: 500;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+}
